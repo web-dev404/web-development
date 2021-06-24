@@ -1,6 +1,5 @@
 'use strict';
 
-
 const headerMenu = document.querySelector('.header__menu'),
 	body = document.querySelector('body'),
 	nav = document.querySelector('.nav'),
@@ -67,13 +66,20 @@ let activeNav = document.querySelector('.team__pages__item.activeNav');
 
 const slider = tns({
 	"container": ".my-slider",
-	"items": 3,
-	"slideBy": "page",
+	"items": 1,
 	"mouseDrag": true,
 	"swipeAngle": false,
 	"speed": 500,
 	"navContainer": "#customize-thumbnails",
-	"controls": false
+	"controls": false,
+	responsive: {
+		767: {
+			items: 2
+		},
+		1100: {
+			items: 3
+		}
+	}
 });
 
 sliderNav.addEventListener('click', (e) => {
@@ -83,5 +89,4 @@ sliderNav.addEventListener('click', (e) => {
 		activeNav = target;
 		target.classList.add('activeNav');
 	}
-
 });
