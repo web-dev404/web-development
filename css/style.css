@@ -663,8 +663,13 @@ textarea:focus {
 	margin-bottom: 30px;
 }
 
+.team__text__social_networks {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .team__text__social_networks__link {
-	margin-right: 25px;
+	margin: 0 25px 10px 0;
 }
 
 .team__text__social_networks__link:last-child {
